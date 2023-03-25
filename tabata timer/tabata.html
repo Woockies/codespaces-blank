@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabata Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="intro">
+        <h1>Tabata Timer</h1>
+        <p>
+          This is a simple Tabata timer app that allows you to set the time for
+          exercise and rest intervals, as well as the number of cycles. Click
+          the "Start" button to begin the timer.
+        </p>
+        <form id="timer-form">
+          <div class="form-group">
+            <label for="exercise-time">Exercise Time (seconds):</label>
+            <input type="number" id="exercise-time" name="exercise-time" value="20" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="rest-time">Rest Time (seconds):</label>
+            <input type="number" id="rest-time" name="rest-time" value="10" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="cycles">Number of Cycles:</label>
+            <input type="number" id="cycles" name="cycles" value="8" min="1" required />
+          </div>
+          <button type="button" id="start-btn">Start</button>
+          <button type="button" id="reset-btn">Reset</button>
+        </form>
+      </section>
+
+      <section id="timer-display">
+        <div id="timer-label"></div>
+        <div id="time-left"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
